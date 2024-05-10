@@ -23,19 +23,19 @@ class MainActivity : AppCompatActivity() {
         adapter = ImageAdapter(this, imageUrls)
         gridView.adapter = adapter
 
-        // Fetch multiple fox images using coroutines
+        // Here I am using coroutines to Fetch multiple fox images using coroutines
         fetchMultipleFoxImages()
     }
 
     private fun fetchMultipleFoxImages() {
-        val numberOfImages = 10 // Change this number as needed
+        val numberOfImages = 12
 
         CoroutineScope(Dispatchers.IO).launch {
             repeat(numberOfImages) {
                 try {
                     val response = URL("https://randomfox.ca/floof/").readText()
                     val imageUrl = JSONObject(response).getString("image")
-                    // Update adapter on the main thread
+
                     withContext(Dispatchers.Main) {
                         imageUrls.add(imageUrl)
                         adapter.notifyDataSetChanged()
