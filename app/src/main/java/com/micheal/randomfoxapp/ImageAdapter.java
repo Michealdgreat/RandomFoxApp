@@ -10,8 +10,8 @@ import java.util.ArrayList;
 
 public class ImageAdapter extends BaseAdapter {
 
-    private Context context;
-    private ArrayList<String> imageUrls;
+    private final Context context;
+    private final ArrayList<String> imageUrls;
 
     public ImageAdapter(Context context, ArrayList<String> imageUrls) {
         this.context = context;

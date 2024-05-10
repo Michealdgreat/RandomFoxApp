@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                 try {
                     val response = URL("https://randomfox.ca/floof/").readText()
                     val imageUrl = JSONObject(response).getString("image")
+                    // Update adapter on the main thread
                     withContext(Dispatchers.Main) {
                         imageUrls.add(imageUrl)
                         adapter.notifyDataSetChanged()
