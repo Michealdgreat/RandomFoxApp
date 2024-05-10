@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.colormind"
+    namespace = "com.micheal.randomfoxapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.colormind"
+        applicationId = "com.micheal.randomfoxapp"
         minSdk = 27
         targetSdk = 34
         versionCode = 1
