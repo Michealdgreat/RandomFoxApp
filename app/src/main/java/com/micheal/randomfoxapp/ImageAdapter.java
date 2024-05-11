@@ -44,7 +44,7 @@ public class ImageAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
-        // Load image using Glide
+        // Here is where I loaded the image using Glide
         Glide.with(context).load(imageUrls.get(position)).into(imageView);
 
         return imageView;
